@@ -7,7 +7,7 @@ public class TrapTrigger : MonoBehaviour {
     // public GameObject trapPrefab;
     public Trap trap;
     bool trapActivated;
-    public GameObject playerObj;
+  //  public GameObject playerObj;
 
  
     void Start()
@@ -29,7 +29,7 @@ public class TrapTrigger : MonoBehaviour {
             Instantiate(trap.prefab, transform.position, Quaternion.identity);
             Debug.Log(" player has taken hectic amount of damage");
 
-            Destroy(playerObj);
+           // Destroy(playerObj);
         }
     }
 }

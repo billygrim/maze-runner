@@ -5,8 +5,9 @@ using UnityEngine;
 public class Play : MonoBehaviour {
 
     public Camera cam;
-    public float speed;
+    public float speed = 2f;
     public float rotationSpeed;
+    public float sprint = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,5 +24,16 @@ public class Play : MonoBehaviour {
 
         transform.Translate(movement * Time.deltaTime * speed);
         transform.Rotate(rotation * Time.deltaTime * rotationSpeed);
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprint;
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = 2f;
+        }
 	}
+
 }
